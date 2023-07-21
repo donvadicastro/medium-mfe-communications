@@ -1,0 +1,57 @@
+{
+  "name": "productListWidget",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/productListWidget/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/productListWidget"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "productListWidget:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "productListWidget:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "productListWidget:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "productListWidget:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "productListWidget:build:development"
+        },
+        "production": {
+          "buildTarget": "productListWidget:build:production"
+        }
+      }
+    }
+  }
+}

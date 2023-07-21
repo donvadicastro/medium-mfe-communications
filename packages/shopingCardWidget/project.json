@@ -1,8 +1,8 @@
 {
-  "name": "application1",
+  "name": "shopingCardWidget",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/application1/src",
+  "sourceRoot": "packages/shopingCardWidget/src",
   "tags": [],
   "targets": {
     "build": {
@@ -10,7 +10,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/application1"
+        "outputPath": "dist/packages/shopingCardWidget"
       },
       "configurations": {
         "development": {
@@ -25,15 +25,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "application1:build"
+        "buildTarget": "shopingCardWidget:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "application1:build:development",
+          "buildTarget": "shopingCardWidget:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "application1:build:production",
+          "buildTarget": "shopingCardWidget:build:production",
           "hmr": false
         }
       }
@@ -42,30 +42,15 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "application1:build"
+        "buildTarget": "shopingCardWidget:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "application1:build:development"
+          "buildTarget": "shopingCardWidget:build:development"
         },
         "production": {
-          "buildTarget": "application1:build:production"
+          "buildTarget": "shopingCardWidget:build:production"
         }
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/packages/application1"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/application1"
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["packages/application1/**/*.ts"]
       }
     }
   }
