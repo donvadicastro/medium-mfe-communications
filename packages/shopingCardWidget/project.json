@@ -20,38 +20,6 @@
           "mode": "production"
         }
       }
-    },
-    "serve": {
-      "executor": "@nx/vite:dev-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "shopingCardWidget:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "shopingCardWidget:build:development",
-          "hmr": true
-        },
-        "production": {
-          "buildTarget": "shopingCardWidget:build:production",
-          "hmr": false
-        }
-      }
-    },
-    "preview": {
-      "executor": "@nx/vite:preview-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "shopingCardWidget:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "shopingCardWidget:build:development"
-        },
-        "production": {
-          "buildTarget": "shopingCardWidget:build:production"
-        }
-      }
     }
   }
 }
