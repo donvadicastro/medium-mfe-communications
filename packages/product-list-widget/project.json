@@ -1,8 +1,8 @@
 {
-  "name": "productListWidget",
+  "name": "product-list-widget",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/productListWidget/src",
+  "sourceRoot": "packages/product-list-widget/src",
   "tags": [],
   "targets": {
     "build": {
@@ -10,7 +10,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/productListWidget"
+        "outputPath": "dist/packages/product-list-widget"
       },
       "configurations": {
         "development": {
