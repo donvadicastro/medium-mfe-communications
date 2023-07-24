@@ -34,13 +34,13 @@ export class ProductListWidget extends LitElement {
   }
 
   render() {
-    const products = [{name: 'product1', price: 100}, {name: 'product2', price: 250}];
+    const products = [{name: 'Red phone', price: 100}, {name: 'Also red phone', price: 250}];
 
     return html`
       <div class="container">
         <div class="content">
 	 				<div class="row">
-	 					<div class="col-md-12 col-lg-8">
+	 					<div class="col-md-12 col-lg-10">
 	 						<div class="items">
                ${map(products, (i) => html`
 				 				<div class="product">
@@ -51,7 +51,7 @@ export class ProductListWidget extends LitElement {
 					 					<div class="col-md-9">
 					 						<div class="info">
 						 						<div class="row">
-							 						<div class="col-md-5 product-name">
+							 						<div class="col-md-6 product-name">
 							 							<div class="product-name">
 								 							<h3>${i.name}</h3>
 								 							<div class="product-info">
@@ -61,7 +61,7 @@ export class ProductListWidget extends LitElement {
 									 						</div>
 									 					</div>
 							 						</div>
-							 						<div class="col-md-3 price">
+							 						<div class="col-md-2 price">
 							 							<span>$${i.price}</span>
 							 						</div>
                            <div class="col-md-4 price">

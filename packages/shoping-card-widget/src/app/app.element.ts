@@ -28,6 +28,11 @@ export class ShopingCardWidget extends LitElement {
         <div class="summary">
           <h3>Summary</h3>
           <div class="summary-item"><span class="text">Subtotal</span><span class="price">$${sum}</span></div>
+          <u>
+            ${this.cart.map((i: { name: string; price: number; }) => html`
+              <li>${i.name}<span class="price">$${i.price}</span></li>
+            `)}
+          </u>
           <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
           <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
           <div class="summary-item"><span class="text">Total</span><span class="price">$${sum}</span></div>
