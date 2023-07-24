@@ -1,8 +1,8 @@
 {
-  "name": "shopingCardWidget",
+  "name": "shoping-card-widget",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "packages/shopingCardWidget/src",
+  "sourceRoot": "packages/shoping-card-widget/src",
   "tags": [],
   "targets": {
     "build": {
@@ -10,7 +10,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/shopingCardWidget"
+        "outputPath": "dist/packages/shoping-card-widget"
       },
       "configurations": {
         "development": {

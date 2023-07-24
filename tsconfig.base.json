@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@mfe/product-list-widget/*": ["packages/product-list-widget/src/*"],
+      "@mfe/shopping-card-widget/*": ["packages/shopping-card-widget/src/*"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

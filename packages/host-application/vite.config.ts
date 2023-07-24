@@ -1,9 +1,11 @@
 /// <reference types="vitest" />
+import path from 'path';
 import { defineConfig } from 'vite';
 
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
+  base: './',
   cacheDir: '../../node_modules/.vite/host-application',
 
   server: {
@@ -39,4 +41,12 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
+
+  resolve: {
+    alias: {
+      '@mfe/product-list-widget': path.resolve(__dirname, '../product-list-widget/src'),
+      '@mfe/shoping-card-widget': path.resolve(__dirname, '../shoping-card-widget/src'),
+    },
+  },
+  // include reference to projects
 });

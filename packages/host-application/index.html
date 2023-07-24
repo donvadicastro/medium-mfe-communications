@@ -7,14 +7,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-    <shoping-card-widget></shoping-card-widget>
-    <product-list-widget></product-list-widget>
+    <section class="shopping-cart dark">
+      <div class="block-heading">
+        <h2>Products</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-8">
+          <product-list-widget></product-list-widget>
+        </div>
+        <div class="col-md-12 col-lg-4">
+          <shoping-card-widget></shoping-card-widget>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="../product-list-widget/src/main.ts"></script>
-    <script type="module" src="../shopingCardWidget/src/main.ts"></script>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

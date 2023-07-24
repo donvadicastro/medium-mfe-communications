@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/shopingCardWidget',
+  cacheDir: '../../node_modules/.vite/shoping-card-widget',
 
   server: {
     port: 4200,
