@@ -1,42 +1,20 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement } from 'lit/decorators.js';
 import { map } from 'lit/directives/map.js';
 import * as styles from './app.element.css?inline';
-import { GlobalStore, IAction } from 'redux-micro-frontend';
-import { legacy_createStore as createStore } from 'redux';
 
-const storeAddToshoppingCartAction = "add-to-shopping-cart";
+export const storeAddToshoppingCartAction = "add-to-shopping-cart";
 
-@customElement('product-list-widget')
-export class ProductListWidget extends LitElement {
-  static styles = unsafeCSS(styles.default);
+export abstract class AbstractProductListWidget extends LitElement {
+	static styles = unsafeCSS(styles.default);
 
-  private store = GlobalStore.Get();
+	createRenderRoot() {
+		return this;
+	}
 
-  createRenderRoot() {
-    return this;
-  }
+	render() {
+		const products = [{ name: 'Red phone', price: 100 }, { name: 'Also red phone', price: 250 }];
 
-  connectedCallback(): void {
-    super.connectedCallback();
-
-    const reducer = (state: any = { shoppingCart: [] }, action: IAction) => {
-      switch (action.type) {
-        case storeAddToshoppingCartAction:
-          return { ...state, shoppingCart: [...state.shoppingCart, action.payload] };
-        default:
-          return state;
-      }
-    };
-
-    const appStore = createStore(reducer);
-    this.store.RegisterStore("product-list-widget", appStore, [storeAddToshoppingCartAction]);
-  }
-
-  render() {
-    const products = [{name: 'Red phone', price: 100}, {name: 'Also red phone', price: 250}];
-
-    return html`
+		return html`
       <div class="container">
         <div class="content">
 	 				<div class="row">
@@ -79,9 +57,7 @@ export class ProductListWidget extends LitElement {
 		 		</div>
 	 		</div>
     `;
-  }
+	}
 
-  private onAddToshoppingCart(product: any) {
-    this.store.DispatchAction("product-list-widget", { type: storeAddToshoppingCartAction, payload: product });
-  }
+	protected abstract onAddToshoppingCart(product: any): void;
 }

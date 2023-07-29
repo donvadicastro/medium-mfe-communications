@@ -1,25 +1,12 @@
 import { LitElement, html, unsafeCSS } from 'lit';
-import { customElement } from 'lit/decorators.js';
 import * as styles from './app.element.css?inline';
-import { GlobalStore, IGlobalStore } from 'redux-micro-frontend';
 
-@customElement('shoping-card-widget')
-export class ShopingCardWidget extends LitElement {
+export abstract class AbstractShopingCardWidget extends LitElement {
   static styles = unsafeCSS(styles.default);
-  private store: IGlobalStore = GlobalStore.Get();
-
-  private cart = [];
+  protected cart: any[] = [];
 
   createRenderRoot() {
     return this;
-  }
-
-  connectedCallback(): void {
-      super.connectedCallback();
-      this.store.Subscribe("product-list-widget", (state) => {
-        this.cart = state.shoppingCart;
-        this.requestUpdate();
-      });
   }
 
   render() {
