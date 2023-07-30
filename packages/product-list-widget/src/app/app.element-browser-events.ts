@@ -3,7 +3,7 @@ import { AbstractProductListWidget, storeAddToshoppingCartAction } from './app.e
 
 @customElement('product-list-browser-events-communications-widget')
 export class ProductListWidget extends AbstractProductListWidget {
-  protected override onAddToshoppingCart(product: any) {
+  protected override onAddToshoppingCart(product: {name: string, price: number}) {
     window.postMessage({ type: storeAddToshoppingCartAction, data: product });
   }
 }

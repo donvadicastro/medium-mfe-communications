@@ -12,7 +12,8 @@ export abstract class AbstractShopingCardWidget extends LitElement {
   render() {
     const sum = this.cart.reduce((sum, i: { price: number; }) => sum += i.price, 0);
     return html`
-        <div class="summary">
+        <div class="summary" style="border: dashed 5px green">
+          <h5 style="float: right; margin: -25px -20px 0 0">APPLICATION 2</h5>
           <h3>Summary</h3>
           <div class="summary-item"><span class="text">Subtotal</span><span class="price">$${sum}</span></div>
           <u>

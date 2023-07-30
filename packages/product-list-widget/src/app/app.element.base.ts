@@ -17,7 +17,8 @@ export abstract class AbstractProductListWidget extends LitElement {
 		return html`
       <div class="container">
         <div class="content">
-	 				<div class="row">
+	 				<div class="row" style="border: dashed 5px grey" >
+            <h5>&nbsp;APPLICATION 1</h5>
 	 					<div class="col-md-12 col-lg-10">
 	 						<div class="items">
                ${map(products, (i) => html`
