@@ -45,7 +45,8 @@ export default defineConfig({
   build: {
     outDir: '../../dist',
     emptyOutDir: true,
-    sourcemap: true,
+    sourcemap: false,
+    modulePreload: false,
     rollupOptions: {
       input: {
         'host-application': path.resolve(__dirname, 'index.html'),
