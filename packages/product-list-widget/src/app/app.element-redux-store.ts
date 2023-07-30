@@ -4,7 +4,7 @@ import { GlobalStore, IAction } from 'redux-micro-frontend';
 import { AbstractProductListWidget, storeAddToshoppingCartAction } from './app.element.base';
 
 @customElement('product-list-redux-store-communications-widget')
-export class ProductListWidget extends AbstractProductListWidget {
+export class ProductListReduxStoreCommunicationWidget extends AbstractProductListWidget {
 	private store = GlobalStore.Get();
 
 	connectedCallback(): void {

@@ -2,7 +2,7 @@ import { customElement } from 'lit/decorators.js';
 import { AbstractShopingCardWidget } from './app.element.base';
 
 @customElement('shoping-card-browser-events-communications-widget')
-export class ShopingCardWidget extends AbstractShopingCardWidget {
+export class ShopingCardBrowserEventsCommunicationsWidget extends AbstractShopingCardWidget {
   connectedCallback(): void {
       super.connectedCallback();
 

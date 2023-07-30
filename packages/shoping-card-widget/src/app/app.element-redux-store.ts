@@ -3,7 +3,7 @@ import { GlobalStore, IGlobalStore } from 'redux-micro-frontend';
 import { AbstractShopingCardWidget } from './app.element.base';
 
 @customElement('shoping-card-redux-store-communications-widget')
-export class ShopingCardWidget extends AbstractShopingCardWidget {
+export class ShopingCardReduxStoreCommunicationsWidget extends AbstractShopingCardWidget {
   private store: IGlobalStore = GlobalStore.Get();
 
   connectedCallback(): void {
