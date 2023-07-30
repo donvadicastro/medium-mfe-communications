@@ -42,6 +42,19 @@ export default defineConfig({
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 
+  build: {
+    outDir: '../../dist',
+    emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      input: {
+        'host-application': path.resolve(__dirname, 'index.html'),
+        'simple': path.resolve(__dirname, 'index-simple.html'),
+        'redux': path.resolve(__dirname, 'index-redux.html'),
+      },
+    },
+  },
+
   resolve: {
     alias: {
       '@mfe/product-list-widget': path.resolve(__dirname, '../product-list-widget/src'),
