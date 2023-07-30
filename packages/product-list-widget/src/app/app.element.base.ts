@@ -1,12 +1,9 @@
-import { LitElement, html, unsafeCSS } from 'lit';
+import { LitElement, html } from 'lit';
 import { map } from 'lit/directives/map.js';
-import * as styles from './app.element.css?inline';
 
 export const storeAddToshoppingCartAction = "add-to-shopping-cart";
 
 export abstract class AbstractProductListWidget extends LitElement {
-	static styles = unsafeCSS(styles.default);
-
 	createRenderRoot() {
 		return this;
 	}

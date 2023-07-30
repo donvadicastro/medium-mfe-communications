@@ -1,8 +1,6 @@
-import { LitElement, html, unsafeCSS } from 'lit';
-import * as styles from './app.element.css?inline';
+import { LitElement, html } from 'lit';
 
 export abstract class AbstractShopingCardWidget extends LitElement {
-  static styles = unsafeCSS(styles.default);
   protected cart: any[] = [];
 
   createRenderRoot() {

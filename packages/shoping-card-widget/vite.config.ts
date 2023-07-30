@@ -20,14 +20,5 @@ export default defineConfig({
     viteTsConfigPaths({
       root: '../../',
     }),
-  ],
-
-  build: {
-		lib: {
-			entry: {
-        module: 'src/app/app.element.ts'
-      },
-			formats: ['es'],
-		}
-	},
+  ]
 });
